@@ -75,5 +75,5 @@ for binsize in 10kb 50kb 500kb 1000kb; do
         	--outDir="$OUTDIR" \
         	--chrs="$CHRS" \
         	--chrNormalize="$CHR_NORM_TRAIN" \
-			    --chrTrain="$CHR_NORM_TRAIN"
+		--chrTrain="$CHR_NORM_TRAIN"
 done
