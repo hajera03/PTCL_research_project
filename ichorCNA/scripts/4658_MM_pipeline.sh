@@ -1,3 +1,4 @@
+#this script runs ichorCNA on the existing merged.bam file for 4658_MM for 4 binsizes - 10kb, 50kb, 500kb, 1000kb
 #!/bin/bash
 
 module load R
@@ -25,7 +26,7 @@ for binsize in 10000 50000 500000 1000000; do
     readCounter --window "$binsize" --quality 1 "$BAM" > "${WIGDIR}/${ID}.${binsize}.wig"
 done
 
-#filtering to exclude weird chromosomes
+#filtering to exclude non-standard chromosomes
 cd "$WIGDIR"
 for wig in *.wig; do
     binsize=$(echo "$wig" | sed -E 's/.*\.([0-9]+)\.wig/\1/')
@@ -43,7 +44,7 @@ for wig in *.wig; do
     ' "$wig" > "$outfile"
 done
 
-#renaming filtered files for consistency
+#renaming filtered files for consistency and ease
 for filtered in *.filtered.wig; do
 	if [[ "$filtered" =~ \.([0-9]+)\.filtered\.wig$ ]]; then
 		binsize="${BASH_REMATCH[1]}"
