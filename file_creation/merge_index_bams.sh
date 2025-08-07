@@ -1,12 +1,5 @@
+#this script merges and indexes multiple bam files for two ctDNA samples : 4408_RDV and 4658_MMS using samtools
 #!/bin/bash
-#SBATCH --job-name=merge_index_bams         # Job name for SLURM queue
-#SBATCH --nodes=1                           # Run on a single node
-#SBATCH --ntasks=1                          # Number of tasks
-#SBATCH --cpus-per-task=16                  # Use 16 threads
-#SBATCH --mem=200G                          # Memory allocation
-#SBATCH --time=10:00:00                     # Max walltime (hh:mm:ss)
-#SBATCH --mail-type=BEGIN,END,FAIL          # Get emails on job begin, end, and fail
-#SBATCH --mail-user=hf180@student.le.ac.uk  # Your email
 
 #load necessary modules
 module load samtools
