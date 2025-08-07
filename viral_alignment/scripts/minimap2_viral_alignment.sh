@@ -19,8 +19,8 @@ mkdir -p "$REFINDEX"
 
 #sample name dictionary with corresponding fastq file locations
 declare -A FASTQ_PATHS=(
-  	["4408_RDV"]="/lustre/alice3/scratch/dyerseq/hf180/4408_RDV_work/fastq/combined.fastq"
-  	["4658_MMS"]="/lustre/alice3/scratch/dyerseq/hf180/4658_MMS_work/fastq/combined.fastq"
+  	["4408_RDV"]="/lustre/alice3/scratch/dyerseq/hf180/4408_RDV_work/fastq/combined.fastq.gz"
+  	["4658_MMS"]="/lustre/alice3/scratch/dyerseq/hf180/4658_MMS_work/fastq/combined.fastq.gz"
 )
 
 #looping over each sample to perform alignment
