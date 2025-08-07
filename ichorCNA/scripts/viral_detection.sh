@@ -1,3 +1,6 @@
+#this script performs viral genome alignment using minimap2 for FASTQ files of the two samples
+#it aligns raw sequencing reads to Epstein-Barr Virus (EBV) and HTLV-1 reference genomes for two ctDNA samples: 4408_RDV and 4658_MMS
+
 #!/bin/bash
 
 #load required modules
