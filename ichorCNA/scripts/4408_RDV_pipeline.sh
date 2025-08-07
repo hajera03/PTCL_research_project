@@ -1,3 +1,4 @@
+#this script runs ichorCNA on the existing merged.bam file for 4658_MM for 4 binsizes - 10kb, 50kb, 500kb, 1000kb
 #!/bin/bash
 
 module load R
@@ -54,7 +55,6 @@ for filtered in *.filtered.wig; do
     fi
 done
 
-# Step 4: Run ichorCNA for each bin size
 for binsize in 10kb 50kb 500kb 1000kb; do
     WIG="${WIGDIR}/${ID}.${binsize}.filtered.wig"
     GCWIG="${GCBASE}${binsize}.wig"
