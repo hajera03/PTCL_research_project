@@ -1,4 +1,5 @@
 #this script merges and indexes multiple bam files for two ctDNA samples : 4408_RDV and 4658_MMS using samtools
+
 #!/bin/bash
 
 #load necessary modules
